@@ -33,6 +33,8 @@ function fish_prompt
     end
   end
 
-  echo -n -s $arrow $cwd $git_info $normal ' '
+  set -l timestamp $yellow(date "+%H:%M")
+
+  echo -n -s $timestamp ' ' $arrow ' ' $cwd $git_info $normal ' '
 end
 
